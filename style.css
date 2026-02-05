@@ -1,0 +1,116 @@
+/* Centers everything in the middle of the screen */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff0f3;
+  font-family: -apple-system, sans-serif;
+  text-align: center;
+
+  padding-top: 25%;
+}
+
+.card-container {
+  position: relative;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  /* Ensures the container stays organized */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Button Styling */
+button {
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 80px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.title-bg-gif {
+  position: absolute;
+  top: -40px;
+  width: 400px;
+  height: 400px;
+  background-image: url('gifs/hearts.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;      /* Puts it behind the title */
+  opacity: 0.5;     /* Makes it a subtle background element */
+}
+
+.valentines-title {
+  margin-top: 80px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  background: linear-gradient(45deg, #ff4d6d, #c9184a, #800f2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;       /* Ensures text stays on top */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+p {
+  font-size: 1.3rem;
+  color: #590d22;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+#message {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.reveal {
+  display: block;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Gif CSS */
+.gif-container {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.responsive-gif {
+
+  width: 85%;
+  height: 85%;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

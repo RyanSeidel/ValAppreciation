@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <title>Valentine's Day</title>
 </head>
 <body>
-  <h1>Happy Valentine's Day! </h1>
-  <p>
-  I'm glad to have you supporting by my side :)
-  Hope you have a great day! Knowing I'll conquer this race tomorrow!
-  </P>
-  <script src="script.js"></script> 
+  <div class="card-container">
+    <div class="title-bg-gif"></div>
+    <h1 class="valentines-title">Happy Valentine's Day!</h1>
+
+    <button id="openButton">Open your card</button>
+
+<div class="gif-container">
+  <img src="gifs/valentine1.gif" alt="Valentine's Day GIF" class="responsive-gif">
+</div>
+
+    <div id="message" class="hidden">
+    <p>
+      I'm glad to have you supporting by my side :)<br>
+      Hope you have a great day! Knowing I'll conquer this race tomorrow!
+    </p>
+  </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
