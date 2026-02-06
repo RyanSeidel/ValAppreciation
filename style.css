@@ -35,7 +35,7 @@ button {
   font-size: 1.2rem;
   border-radius: 50px;
   cursor: pointer;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 button:active {
@@ -44,7 +44,7 @@ button:active {
 
 .title-bg-gif {
   position: absolute;
-  top: -40px;
+  top: -100px;
   width: 400px;
   height: 400px;
   background-image: url('gifs/hearts.gif');
@@ -56,7 +56,7 @@ button:active {
 }
 
 .valentines-title {
-  margin-top: 80px;
+  margin-top: 20px;
   font-family: 'Dancing Script', cursive;
   font-size: 3.5rem;
   background: linear-gradient(45deg, #ff4d6d, #c9184a, #800f2f);
@@ -80,11 +80,54 @@ p {
 }
 
 #message {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centers the whole block on the phone */
+  width: 100%;
+}
+
+
+#message p {
+  text-align: left; /* Aligns text lines to the left */
+  max-width: 320px; /* Perfect for iPhone 15 width */
+  width: 85%;
+  font-size: 1.2rem;
+  color: #590d22;
+  line-height: 1.6;
+}
+
+.marathon-logo {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px; /* Space between logo and timer */
+  border-radius: 8px;
+}
+
+#marathon-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -70px;
+}
+
+#timer {
+  /* Bold, Rounded Cartoon Style */
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2.8rem; /* Large and impactful */
+  color: white;
+
+  /* Solid Black Outline */
+  -webkit-text-stroke: 2px black;
+
+  /* Adds depth without making the outline look weird */
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  letter-spacing: 1px;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .reveal {
@@ -99,7 +142,7 @@ p {
 
 /* Gif CSS */
 .gif-container {
-  margin-top: 80px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -114,3 +157,4 @@ p {
 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
