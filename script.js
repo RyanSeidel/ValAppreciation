@@ -2,15 +2,22 @@ document.getElementById('openButton').addEventListener('click', function() {
 
 const music = document.getElementById('valentineMusic');
 
-  // Set the starting point to 5 seconds
+  // iOS sometimes needs volume set explicitly
+  music.volume = 1.0;
+
+  // Set starting point
   music.currentTime = 5;
 
-  // Play audio immediately on user click
-  music.play().then(() => {
-      console.log("Audio playing successfully from 5 seconds");
-  }).catch(error => {
-      console.log("Audio failed to play: ", error);
-  });
+  // Play audio
+  const playPromise = music.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      console.log("Playback started");
+    }).catch(error => {
+      console.log("Playback failed. Ensure the file path is music/dragmedown.mp3");
+    });
+  }
 
   const title = document.querySelector('.valentines-title');
   const bgGif = document.querySelector('.title-bg-gif');
