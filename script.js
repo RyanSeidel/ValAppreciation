@@ -1,4 +1,14 @@
 document.getElementById('openButton').addEventListener('click', function() {
+
+  const music = document.getElementById('valentineMusic');
+
+  // Play audio immediately on user click
+  music.play().then(() => {
+      console.log("Audio playing successfully");
+  }).catch(error => {
+      console.log("Audio failed to play: ", error);
+  });
+
   const title = document.querySelector('.valentines-title');
   const bgGif = document.querySelector('.title-bg-gif');
   const message = document.getElementById('message');
