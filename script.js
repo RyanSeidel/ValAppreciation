@@ -1,15 +1,14 @@
 document.getElementById('openButton').addEventListener('click', function() {
 
-  const music = document.getElementById('valentineMusic');
+var bgMusic = document.getElementById("backgroundMusic");
 
-  // 1. Initial play attempt (required by iOS Safari)
-  music.volume = 0.3;
-  music.play().then(() => {
-    // 2. Once playing, skip to 5 seconds
-    music.currentTime = 5;
-    console.log("Music started at 5s");
-  }).catch(error => {
-    console.error("Playback failed. Check file path:", error);
+  // 1. Set volume and start playing immediately
+  bgMusic.volume = 0.3;
+  bgMusic.play().then(() => {
+    // 2. Skip to 5 seconds as requested
+    bgMusic.currentTime = 5;
+  }).catch(function(error) {
+    console.error("Music playback error:", error);
   });
   
   const title = document.querySelector('.valentines-title');
