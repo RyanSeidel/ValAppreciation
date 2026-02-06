@@ -1,10 +1,13 @@
 document.getElementById('openButton').addEventListener('click', function() {
 
-  const music = document.getElementById('valentineMusic');
+const music = document.getElementById('valentineMusic');
+
+  // Set the starting point to 5 seconds
+  music.currentTime = 5;
 
   // Play audio immediately on user click
   music.play().then(() => {
-      console.log("Audio playing successfully");
+      console.log("Audio playing successfully from 5 seconds");
   }).catch(error => {
       console.log("Audio failed to play: ", error);
   });
