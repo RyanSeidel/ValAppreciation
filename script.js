@@ -1,24 +1,17 @@
 document.getElementById('openButton').addEventListener('click', function() {
 
-const music = document.getElementById('valentineMusic');
+  const music = document.getElementById('valentineMusic');
 
-  // iOS sometimes needs volume set explicitly
-  music.volume = 1.0;
-
-  // Set starting point
-  music.currentTime = 5;
-
-  // Play audio
-  const playPromise = music.play();
-
-  if (playPromise !== undefined) {
-    playPromise.then(_ => {
-      console.log("Playback started");
-    }).catch(error => {
-      console.log("Playback failed. Ensure the file path is music/dragmedown.mp3");
-    });
-  }
-
+  // 1. Initial play attempt (required by iOS Safari)
+  music.volume = 0.3;
+  music.play().then(() => {
+    // 2. Once playing, skip to 5 seconds
+    music.currentTime = 5;
+    console.log("Music started at 5s");
+  }).catch(error => {
+    console.error("Playback failed. Check file path:", error);
+  });
+  
   const title = document.querySelector('.valentines-title');
   const bgGif = document.querySelector('.title-bg-gif');
   const message = document.getElementById('message');
