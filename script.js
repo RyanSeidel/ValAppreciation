@@ -3,14 +3,14 @@ document.getElementById('openButton').addEventListener('click', function() {
 var bgMusic = document.getElementById("backgroundMusic");
 
   // 1. Set volume and start playing immediately
-  bgMusic.volume = 0.3;
+  bgMusic.volume = 0.2;
   bgMusic.play().then(() => {
     // 2. Skip to 5 seconds as requested
     bgMusic.currentTime = 5;
   }).catch(function(error) {
     console.error("Music playback error:", error);
   });
-  
+
   const title = document.querySelector('.valentines-title');
   const bgGif = document.querySelector('.title-bg-gif');
   const message = document.getElementById('message');
